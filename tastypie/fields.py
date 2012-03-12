@@ -711,7 +711,8 @@ class ToManyField(RelatedField):
 
         if not the_m2ms:
             if not self.null:
-                raise ApiFieldError("The model '%r' has an empty attribute '%s' and doesn't allow a null value." % (previous_obj, attr))
+                #raise ApiFieldError("The model '%r' has an empty attribute '%s' and doesn't allow a null value." % (previous_obj, attr))
+                return []
 
             return []
 
